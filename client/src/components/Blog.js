@@ -13,12 +13,9 @@ const Blog = ({post}) => {
   }
 
   return (
-    <div className="container">
+    <div className="container p-0">
       <Edit postItem={post} />
-      <div className="card text-dark bg-light mb-3 mt-3">
-        <div className="card-header bg-secondary text-white">
-          {post.post_author}
-        </div>
+      <div className="card text-dark bg-light mb-3">
         <div className="card-body d-flex align-items-start justify-content-between container">
           <div className="w-100">
             <h5 className="card-title mb-4">
@@ -27,10 +24,13 @@ const Blog = ({post}) => {
             <p className="card-text">
               {post.post_body}
             </p>
-            <div className="float-end">
-              <button type="button" data-bs-toggle="modal" data-bs-target={'#' + post.post_id} className="btn btn-sm btn-primary">Edit</button>
-              <button className="btn btn-sm btn-secondary" style={{marginLeft: "8px"}} onClick={() => handleDelete(post.post_id)}>Delete</button>
-            </div>
+          </div>
+        </div>
+        <div className="card-body">
+          ~ {post.post_author}
+          <div className="float-end">
+            <button type="button" data-bs-toggle="modal" data-bs-target={'#' + post.post_id} className="btn btn-sm btn-primary">Edit</button>
+            <button className="btn btn-sm btn-secondary" style={{marginLeft: "8px"}} onClick={() => handleDelete(post.post_id)}>Delete</button>
           </div>
         </div>
       </div>

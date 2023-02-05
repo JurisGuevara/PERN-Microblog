@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.addpost {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+}
+
+.addpost section {
+  position: absolute;
+  top: 1rem;
+}
+
+.addpost section.fixed {
+  position: fixed;
+  max-width: fit-content;
+}
+
+.bloglist {
+  min-height: calc(100vh - 162px);
+  max-width: auto;
+}
+
+.blog {
+  background-color: pink;
+}
+
+.card:hover {
+  background-color: #F4F4F4 !important;
+}
+
+.card-header {
+  border-bottom: none;
+}
